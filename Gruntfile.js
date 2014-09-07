@@ -1,32 +1,20 @@
 'use strict';
 
 module.exports = function (grunt) {
+  require('time-grunt')(grunt);
   require('load-grunt-tasks')(grunt);
 
-  var config = {
-    app: 'develop'
-  };
+  var config = { app: 'develop' };
 
   grunt.initConfig({
-    config: {
-      app: 'develop'
-    },
-    clean: {
-      files: ['.tmp']
-    },
+    config: config,
+    clean: ['.tmp'],
     watch: {
       gruntfile: {
         files: ['Gruntfile.js']
       },
       bower: {
-        files: ['bower.json'],
-      },
-      js: {
-        files: ['<%= config.app %>/scripts/{,*/}*.js'],
-        tasks: [],
-        options: {
-          livereload: true
-        }
+        files: ['bower.json']
       },
       compass: {
         files: ['<%= config.app %>/styles/**/*.{scss,sass}'],
@@ -39,16 +27,15 @@ module.exports = function (grunt) {
         files: [
           '<%= config.app %>/{,*/}*.html',
           '.tmp/styles/{,*/}*.css',
-          '<%= config.app %>/images/{,*/}*'
+          '<%= config.app %>/images/{,*/}*',
+          '<%= config.app %>/scripts/{,*/}*.js'
         ]
       }
     },
     connect: {
       options: {
-        port: 9000,
         open: true,
         livereload: 35729,
-        // Change this to '0.0.0.0' to access the server from outside
         hostname: 'localhost'
       },
       livereload: {
@@ -79,10 +66,5 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.registerTask('serve', [
-    'clean',
-    'compass',
-    'connect:livereload',
-    'watch'
-  ]);
+  grunt.registerTask('serve', ['clean', 'compass', 'connect', 'watch']);
 };
