@@ -3,14 +3,12 @@
   "compass/css3/border-radius";
 
 body {
-  background-color: #BFEFFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   font-family: 'Dosis';
   font-style: normal;
   font-weight: 300;
-  letter-spacing: 0.04em;
 }
 
 h1 {
@@ -20,7 +18,7 @@ h1 {
 .topbar {
   width: 100%;
   height: 50px;
-  background-color: #000;
+  background: #383838 image-url('opacity.png');
 
   .logo {
     @include inline-block;
@@ -29,21 +27,26 @@ h1 {
     height: 100%;
   }
   .logo-name {
-    color: #fff;
-    text-transform: uppercase;
+    // #FFEC8B
+    color: #BFEFFF;
     text-decoration: none;
-    font-family: 'Dosis';
+    font-family: 'Lobster';
     font-style: normal;
-    font-weight: 800;
+    font-size: 30px;
     display: inline-block;
     padding: 4px 0 0 2%;
+    &:hover {
+      color: #FFEC8B;
+    }
   }
   .logo-slogan {
     color: #fff;
     font-family: 'Dosis';
     font-style: normal;
     font-weight: 200;
+    font-style: normal;
     font-size: 14px;
+    display: inline-block;
   }
 }
 .navbar {
@@ -53,6 +56,7 @@ h1 {
 }
 .main-menu {
   list-style: none;
+  text-indent: -99999px;
   .item {
     display: inline;
   }
@@ -65,7 +69,8 @@ h1 {
 .slider {
   width: 100%;
   height: 500px;
-  background-color: #CD6090;
+  background: image-url('cover.jpg') no-repeat;
+  border-bottom: 1px solid #FFEC8B;
 }
 .search {
   width: 100%;
