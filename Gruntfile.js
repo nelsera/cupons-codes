@@ -54,6 +54,7 @@ module.exports = function (grunt) {
       options: {
         sassDir: '<%= config.app %>/styles',
         cssDir: '.tmp/styles',
+        imagesDir: '<%= config.app %>/images',
         relativeAssets: true,
         noLineComments: false
       },
