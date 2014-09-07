@@ -7,6 +7,7 @@
 
 	<link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
 	<link rel="stylesheet" href="styles/styles.css">
 </head>
@@ -17,7 +18,17 @@
 		<span class="logo-slogan">Ofertas das principais lojas da web.</span>
 	</h1>
 
-	<nav class="navbar">
+	<div class="daily-offer">
+		<a href="#"><strong>Oferta do dia</strong></a>
+	</div>
+
+	<form class="search">
+		<input type="text" class="input-search">
+		<button class="btn-search"><i class="fa fa-search"></i></button>
+		<!--button class="btn-category">Categoria</button-->
+	</form>
+
+	<!--nav class="navbar">
 		<ul class="main-menu">
 			<li class="item"><a href="#" class="nav" title="Roupas e Moda">Roupas e Moda</a></li>
 			<li class="item"><a href="#" class="nav" title="Calçados">Calçados</a></li>
@@ -30,20 +41,9 @@
 			<li class="item"><a href="#" class="nav" title="Livros">Livros</a></li>
 			<li class="item"><a href="#" class="nav" title="Outros">Outros</a></li>
 		</ul>
-	</nav>
-
-	<div class="daily-offer">
-		<strong>Oferta do dia</strong>
-	</div>
+	</nav-->
 </header>
 <div class="slider"></div>
-<div class="search">
-	<form>
-		<input type="text" class="input-search">
-		<button class="btn-search">Pesquisar</button>
-		<button class="btn-category">Categoria</button>
-	</form>
-</div>
 <main>
 	<div class="offers"></div>
 </main>

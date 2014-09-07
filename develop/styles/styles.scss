@@ -1,11 +1,9 @@
 @import 
   "compass/css3/inline-block",
+  "compass/css3/box-sizing",
   "compass/css3/border-radius";
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
   font-family: 'Dosis';
   font-style: normal;
   font-weight: 300;
@@ -34,7 +32,7 @@ h1 {
     font-style: normal;
     font-size: 30px;
     display: inline-block;
-    padding: 4px 0 0 2%;
+    padding: 4px 0 0 10px;
     &:hover {
       color: #FFEC8B;
     }
@@ -52,7 +50,7 @@ h1 {
 .navbar {
   @include inline-block;
   float: right;
-  width: 600px;
+  width: 400px;
 }
 .main-menu {
   list-style: none;
@@ -66,58 +64,70 @@ h1 {
   }
 }
 
+.daily-offer {
+  float: right;
+  background-color: #FF1493;
+  color: #fff;
+  font-family: 'Lobster';
+  font-style: normal;
+  margin: 0;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px;
+    letter-spacing: 0.02em;
+    &:hover {
+      background-color: #00BFFF;
+    }
+  }
+}
+
 .slider {
   width: 100%;
   height: 500px;
   background: image-url('cover.jpg') no-repeat;
-  border-bottom: 1px solid #FFEC8B;
+  border-bottom: 2px solid #EDEDED;
 }
 .search {
-  width: 100%;
-  height: 65px;
-  background-color: #fff;
-  position: relative;
-  padding-top: 20px;
+  float: left;
+  width: 25%;
+  height: 100%;
 
   .input-search {
-    @include border-radius(2px);
-    border: 3px solid #DFDFDF;
+    @include box-sizing(border-box);
+    border: 2px solid #ECECEC;
     background-color: #ECECEC;
-    width: 76%;
-    padding: 10px 15px;
+    padding: 13px 10px;
     outline: none;
     float: left;
-    margin: 0 1% 0 2%;
+    width: 85%;
+    &:focus {
+      border: 2px solid #00BFFF;
+    }
   }
   .btn-search {
-    @include border-radius(2px);
-    background-color: #E83B25;
-    border: 3px solid #E83B25;
-    width: 8%;
-    color: #fff;
-    padding: 10px;
+    border: 0;
+    background-color: #FFEC8B;
+    width: 15%;
+    padding: 14px 0;
     outline: none;
-    font-weight: bold;
     float: left;
-    margin: 0 1% 0 0;
-    font-family: 'Dosis';
-    font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0.04em;
+    color: #fff;
+    font-size: 18px;
   }
   .btn-category {
-    @include border-radius(2px);
-    background-color: #FFE4B5;
-    border: 3px solid #FFE4B5;
+    background-color: #FFEC8B;
+    border: 3px solid #FFEC8B;
     width: 8%;
     color: #D2B48C;
     padding: 10px;
     outline: none; 
     font-weight: bold;
     float: left;
-    font-family: 'Dosis';
+    font-family: 'Lobster';
     font-style: normal;
-    font-weight: 800;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.1em;
   }
 }
