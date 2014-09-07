@@ -6,20 +6,24 @@
 ::selection      { color: #fff;  background: #FF1493; }
 
 body {
-  font-family: 'Dosis';
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
 }
 
 h1 {
-  margin: 0;  
+  margin: 0;
+  font-weight: normal;  
 }
 
 .topbar {
   width: 100%;
   min-width: 1200px;
   height: 48px;
-  background: #383838 image-url('opacity.png');
+  background: rgba(25,25,112 ,0.8) image-url('opacity.png');
+  position: fixed;
+  z-index: 2;
+  top: 0;
 
   .logo {
     display: inline-block;
@@ -29,22 +33,21 @@ h1 {
   .logo-name {
     // #FFEC8B
     height: 100%;
-    color: #BFEFFF;
+    color: #FFEC8B;
     text-decoration: none;
     font-family: 'Lobster';
     font-style: normal;
     font-size: 36px;
     display: inline-block;
     padding: 0 0 0 10px;
+    text-shadow: 1px 1px 1px #FF1493;
+    
     &:hover {
-      color: #FFEC8B;
+      color: #BFEFFF;
     }
   }
   .logo-slogan {
     color: #fff;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 300;
     font-size: 13px;
     display: inline-block;
   }
@@ -65,82 +68,53 @@ h1 {
     height: 100%;
     &.ico-roupas-e-moda {
       .nav {
-        background-position: 2px -321px;
-        &:hover {
-          background-position: 2px -288px;
-        }
+        background-position: 2px -288px;
+        
       }  
     }
     &.ico-calcados {
       .nav {
-        background-position: -337px -321px;
-        &:hover {
-          background-position: -337px -288px;
-        }
+        background-position: -337px -288px;
       }
     }
     &.ico-joias-e-relogios {
       .nav {
-        background-position: -95px -321px;
-        &:hover {
-          background-position: -95px -288px;
-        }
+        background-position: -95px -288px;
       }
     }
     &.ico-bolsas-e-viagem {
       .nav {
-        background-position: -48px -321px;
-        &:hover {
-          background-position: -48px -288px;
-        }
+        background-position: -48px -288px;
       }
     }
     &.ico-saude-e-beleza {
       .nav {
-        background-position: -288px -321px;
-        &:hover {
-          background-position: -288px -288px;
-        }
+        background-position: -288px -288px;
       }
     }
     &.ico-esportes {
       .nav {
-        background-position: -198px -321px;
-        &:hover {
-          background-position: -198px -288px;
-        }
+        background-position: -198px -288px;
       }
     }
     &.ico-eletro {
       .nav {
-        background-position: -148px -321px;
-        &:hover {
-          background-position: -148px -288px;
-        }
+        background-position: -148px -288px;
       }
     }
     &.ico-casa {
       .nav {
-        background-position: -241px -321px;
-        &:hover {
-          background-position: -241px -288px;
-        }
+        background-position: -241px -288px;
       }
     }
     &.ico-livros {
       .nav {
-        background-position: -380px -321px;
-        &:hover {
-          background-position: -380px -288px;
-        }
+        background-position: -380px -288px;
       }
     }
     &.ico-outros {
       .nav {
-        background-position: -420px -321px;
-        &:hover {
-          background-position: -420px -288px;
-        }
+        background-position: -420px -288px;
       }
     }
   }
@@ -178,49 +152,122 @@ h1 {
 
 .slider {
   width: 100%;
-  height: 500px;
-  background: image-url('cover.jpg') no-repeat;
+  height: 400px;
   border-bottom: 2px solid #EDEDED;
+  top: 48px;
+  position: fixed;
+  z-index: 0;
+
+  .cover {
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background: image-url('cover-2.jpg') center repeat-x;
+  }
+
+  .arrow {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    display: inline-block;
+    top: 50%;
+    margin-top: -31px;
+  }
+
+  .arrow-l {
+    @extend .arrow;
+    left: 20px;
+    background: image-url('sprite-left-arrow.png') 0 0 no-repeat;
+  }
+  .arrow-r {
+    @extend .arrow;
+    right: 20px;
+    background: image-url('sprite-right-arrow.png') 0 0 no-repeat;
+  }
 }
-.search {
+.box-search {
   float: left;
-  width: 40%;
-  height: 90%;
-  margin-top: 2px;
+  width: 100%;
+  background: rgba(000,000,000,0.8);
+  position: relative;
+
+  .form-search {
+    left: 50%;
+    margin-left: -520px;
+    position: relative;
+  }
 
   .input-search {
-    @include box-sizing(border-box);
-    border: 2px solid #ECECEC;
-    background-color: #ECECEC;
+    border: 2px solid #00BFFF;
+    background: rgba(255, 255, 205, 0.5);
     padding: 10px 10px 11px;
+    margin: 10px 0;
     outline: none;
     float: left;
-    width: 90%;
+    width: 600px;
+    font-weight: 600;
+    color: #fff;
     &:focus {
-      border: 2px solid #00BFFF;
+      border: 2px solid #FFD700;
     }
   }
   .btn-search {
     border: 0;
-    background-color: #FFEC8B;
-    width: 10%;
-    padding: 11px 0 12px;
+    width: 50px;
     outline: none;
     float: left;
-    color: #fff;
-    font-size: 18px;
+    color: #D1D1D1;
+    font-size: 30px;
+    background: transparent;
+    position: relative;
+    left: -50px;
+    top: 10px;
   }
-  .btn-category {
-    background-color: #FFEC8B;
-    border: 3px solid #FFEC8B;
-    width: 8%;
-    color: #D2B48C;
-    padding: 10px;
-    outline: none; 
-    font-weight: bold;
-    float: left;
-    font-family: 'Lobster';
-    font-style: normal;
-    letter-spacing: 0.1em;
+  .ex {
+    color: #a6a6a6;
+    font-size: 12px;
+    position: relative;
+    top: 40px;
+    left: -40px;
+    a {
+      color: #e4dee5;
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
   }
+}
+
+.content {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: 535px;
+  z-index: 1;
+  border-top: 2px solid #FFD700;
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  top: 450px;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 3000px;
+  }
+  
+  .item {
+    display: inline-block;
+    margin: 20px 27px;
+  }
+}
+
+.offers {
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
 }
