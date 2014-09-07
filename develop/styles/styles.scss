@@ -4,6 +4,13 @@
 
 body {
   background-color: #BFEFFF;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: 'Dosis';
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.04em;
 }
 
 h1 {
@@ -18,20 +25,31 @@ h1 {
   .logo {
     @include inline-block;
     float: left;
+    width: 450px;
+    height: 100%;
   }
   .logo-name {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    font-weight: normal;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 800;
+    display: inline-block;
+    padding: 4px 0 0 2%;
   }
   .logo-slogan {
     color: #fff;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
   }
 }
 .navbar {
   @include inline-block;
   float: right;
+  width: 600px;
 }
 .main-menu {
   list-style: none;
@@ -73,11 +91,14 @@ h1 {
     width: 8%;
     color: #fff;
     padding: 10px;
-    text-transform: uppercase;
     outline: none;
     font-weight: bold;
     float: left;
     margin: 0 1% 0 0;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0.04em;
   }
   .btn-category {
     @include border-radius(2px);
@@ -86,9 +107,12 @@ h1 {
     width: 8%;
     color: #D2B48C;
     padding: 10px;
-    text-transform: uppercase;
     outline: none; 
     font-weight: bold;
     float: left;
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 0.04em;
   }
 }
