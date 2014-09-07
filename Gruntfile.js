@@ -55,11 +55,11 @@ module.exports = function (grunt) {
         sassDir: '<%= config.app %>/styles',
         cssDir: '.tmp/styles',
         relativeAssets: true,
-        assetCacheBuster: false,
         noLineComments: false
       },
       develop: {
         options: {
+          assetCacheBuster: false,
           debugInfo: false
         }
       }
