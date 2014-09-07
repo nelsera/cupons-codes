@@ -92,17 +92,18 @@ h1 {
 }
 .search {
   float: left;
-  width: 25%;
-  height: 100%;
+  width: 40%;
+  height: 90%;
+  margin-top: 2px;
 
   .input-search {
     @include box-sizing(border-box);
     border: 2px solid #ECECEC;
     background-color: #ECECEC;
-    padding: 13px 10px;
+    padding: 10px 10px 11px;
     outline: none;
     float: left;
-    width: 85%;
+    width: 90%;
     &:focus {
       border: 2px solid #00BFFF;
     }
@@ -110,8 +111,8 @@ h1 {
   .btn-search {
     border: 0;
     background-color: #FFEC8B;
-    width: 15%;
-    padding: 14px 0;
+    width: 10%;
+    padding: 11px 0 12px;
     outline: none;
     float: left;
     color: #fff;
