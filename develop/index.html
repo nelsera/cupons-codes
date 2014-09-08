@@ -63,7 +63,10 @@
 		<form class="form-search">
 			<input type="text" class="input-search" placeholder="Buscar loja. Ex: Dafiti, Walmart, Kanui...">
 			<button class="btn-search" title="Buscar"><i class="fa fa-search"></i></button>
-			<div class="ex">Ex: <a href="#">Ricardo Eletro</a>, <a href="#">Dafiti</a>, <a href="#">Submarino</a>, <a href="#">Extra</a>, <a href="#">Walmart</a>, <a href="#">Netshoes</a>, <a href="#">Americanas</a></div>
+			<button class="btn-top-rated" title="Top 10"><i class="fa fa-trophy"></i></button>
+			<!--div class="shares">
+				<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+			</div-->
 		</form>
 	</div>
 
@@ -76,7 +79,7 @@
 					</a>
 					<div class="cupon-info"> 
 						<div class="coupon-header">
-							<span class="item-type item-type-code">Cupom de desconto</span>
+							<span class="item-type">Cupom de desconto</span>
 							<span class="item-is-verified">Verificado <span>2 dias atrás</span></span>
 							<span class="item-expiration">Expira em <span class="exp-soon">30/09/2014</span></span> 
 						</div>
@@ -184,10 +187,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="aside">
+				<div class="fb-like-box" data-href="https://www.facebook.com/FacebookDevelopers" data-width="300" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+				<a href="#" class="button-question">Como usar cupouns de desconto<i class="fa fa-question"></i></a>
+
+				<a href="#" class="button-star">Veja nossos Cupons exclusivos<i class="fa fa-star"></i></a>
+
+			</div>
 		</div>
 	</div>
 </div>
-
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=320348494797328&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <script src="scripts/app.js"></script>
+
 </body>
 </html>

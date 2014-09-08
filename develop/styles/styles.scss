@@ -9,6 +9,7 @@ body {
   font-family: 'Open Sans';
   font-style: normal;
   font-weight: 300;
+  min-width: 1180px;
 }
 
 h1 {
@@ -18,7 +19,6 @@ h1 {
 
 .topbar {
   width: 100%;
-  min-width: 1180px;
   height: 48px;
   background: rgba(25,25,112 ,0.8) image-url('opacity.png');
   position: fixed;
@@ -157,6 +157,7 @@ h1 {
 
 .slider {
   width: 100%;
+  min-width: 1180px;
   height: 400px;
   border-bottom: 2px solid #EDEDED;
   top: 48px;
@@ -193,7 +194,7 @@ h1 {
 .box-search {
   float: left;
   width: 100%;
-  background: rgba(000,000,000,0.7);
+  background: rgba(000,000,000,0.7) image-url('opacity.png');
   position: relative;
 
   .form-search {
@@ -229,6 +230,18 @@ h1 {
     left: -50px;
     top: 10px;
   }
+  .btn-top-rated {
+    border: 0;
+    outline: none;
+    float: left;
+    background: #00BFFF;
+    color: #FFEC8B;
+    font-size: 30px;
+    position: relative;
+    padding: 3px 10px;
+    left: -40px;
+    top: 10px;
+  }
   ::-webkit-input-placeholder {
     color: #fff;
     font-family: 'Open Sans';
@@ -255,20 +268,6 @@ h1 {
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 300;
-  }
-  .ex {
-    color: #a6a6a6;
-    font-size: 12px;
-    position: relative;
-    top: 40px;
-    left: -40px;
-    a {
-      color: #e4dee5;
-      &:hover {
-        color: #fff;
-        text-decoration: none;
-      }
-    }
   }
 }
 
@@ -311,9 +310,9 @@ h1 {
 }
 
 .offers {
+  float: left;
   width: 850px;
-  overflow: hidden;
-  padding-top: 40px;
+  padding-top: 20px;
 
   .offer {
     overflow: hidden;
@@ -331,17 +330,32 @@ h1 {
   .cupon-info {
     float: left;
     width: 580px;
+    color: #7d7d7d;
   }
   .coupon-header {
     font-size: 12px;
+    font-weight: 600;
+    .item-type {
+      display: inline-block;
+      margin-right: 10px; 
+    }
+    .item-is-verified {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .item-expiration {
+      display: inline-block;
+    }
   }
   .item-title {
     font-size: 22px;
     margin: 0;
+    color: #3f3f3f;
   }
   .item-desc {
     font-size: 12px;
     margin: 0;
+    font-weight: 400;
   }
   .item-code {
     position: absolute;
@@ -361,5 +375,40 @@ h1 {
         background-color: #00BFFF;
       }
     }
+  }
+}
+
+.aside {
+  float: right;
+  width: 300px;
+  margin-top: 10px;
+
+  .button {
+    @include box-sizing(border-box);
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    color: #3f3f3f;
+    
+    &:hover {
+      color: #00BFFF;
+      text-decoration: underline;
+    }
+    i {
+      font-size: 18px;
+      display: inline-block;
+      padding-left: 10px;
+    }
+  }
+  
+  .button-question {
+    @extend .button;
+  }
+  .button-star {
+    @extend .button;
+    
   }
 }
