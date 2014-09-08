@@ -54,9 +54,14 @@ module.exports = function (grunt) {
       options: {
         sassDir: '<%= config.app %>/styles',
         cssDir: '.tmp/styles',
-        //imagesDir: '<%= config.app %>/images',
-        relativeAssets: true,
-        noLineComments: false
+        generatedImagesDir: '.tmp/imgs/generated',
+        imagesDir: '<%= config.app %>/images',
+        javascriptsDir: '<%= config.app %>/scripts',
+        httpImagesPath: '../images',
+        httpGeneratedImagesPath: '../images/generated',
+        // raw: 'gem \'oily_png\'\n',
+        // relativeAssets: false
+        assetCacheBuster: true
       },
       develop: {
         options: {
